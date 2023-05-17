@@ -23,7 +23,46 @@ Se a implementação é dificil de explicar, é uma má ideia. se for fácil de 
 
 
 '''
-print("hello")
+
+# Hello World Multi Linguas.
+# Usage: LANG env
+# export LANH=pt_BR
+#  
+
+__version__ = "0.0.1"
+__author__ = "Douglas Desiderio"
+__license__ = "Unlicense"
+
+import os 
+
+# LANG=C.UTF-8
+# snake Case
+current_language = os.getenv("LANG", "en_US")[:5]
+
+msg = "Hello, World!"
+
+
+if current_language == "pt_BR":
+    msg = "Ola Mundo!"
+
+elif current_language =="it_IT":
+    msg = "Ciao, Mondo!"
+elif current_language =="es_SP":
+    msg ="Hola, Mundo!"
+elif current_language =="de_DE":
+    msg = "Hallo Welt!"
+elif current_language == "fr_FR":
+    msg = "Bounjour Monde!"
+
+
+
+# Ficando obsoleto
+if __name__ == "__main__":
+    print(msg)
+
+# LANG=it_IT python3 hello.py
+
+
 
 
 
